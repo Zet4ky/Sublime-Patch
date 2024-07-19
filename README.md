@@ -1,12 +1,30 @@
 # Sublime-Patch
-Quick made script to make Sublime Text think that its activated
 
-Methods to run the file:
-- Open Powershell.exe and enter irm https://raw.githubusercontent.com/Zet4ky/Sublime-Patch/main/subl_patch.ps1 | iex
-- You can download the file and run it with right click > "Run with PowerShell"
-- Open a PowerShell.exe window and paste the contents of the script
+## Overview
+This script is designed to make Sublime Text think it is activated by patching specific bytes in the executable. 
 
-How it works:
-Replace 140811:140817 bytes to 0xC6 0x40 0x05 0x01 0x48 0x85 0xC9
+## Usage
+You have several options to run this script:
 
-Credits: https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff?permalink_comment_id=4669272#gistcomment-4669272
+1. **Run Directly from the Web:**
+   Open PowerShell and execute the following command:
+   ```powershell
+   irm https://raw.githubusercontent.com/Zet4ky/Sublime-Patch/main/subl_patch.ps1 | iex```
+2. **Download and Run:**
+
+    Download the script from the GitHub [repository](https://github.com/Zet4ky/Sublime-Patch/archive/refs/heads/main.zip).
+    Extract the contents of `Sublime-Patch-main.zip`
+    Right-click on `subl_patch.ps1` and select "Run with PowerShell".
+
+3. **Powershell:**
+
+    Open a PowerShell window.
+    Copy and paste the entire script from the GitHub repository.
+
+## How It Works
+
+The script replaces a specific byte sequence in the Sublime Text executable to simulate activation. It performs the following byte replacement:
+
+Replace bytes at offset 140811 to 140817 with the following values: `0xC6 0x40 0x05 0x01 0x48 0x85 0xC9`
+
+Source & Credits to: https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff?permalink_comment_id=4669272#gistcomment-4669272
