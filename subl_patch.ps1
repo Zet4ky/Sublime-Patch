@@ -9,17 +9,15 @@ $filePath = Join-Path $basePath "sublime_text.exe"
 
 function Restart-Script {
     try {
+            [String]$cmd = "@echo off & chcp 850 >nul && REG add `"HKCU\Console`" /v QuickEdit /t REG_DWORD /d 0 /f >nul 2>&1 && cls && powershell.exe -Executionpolicy Unrestricted -Command `"Invoke-RestMethod https://raw.githubusercontent.com/Zet4ky/Sublime-Patch/main/subl_patch.ps1 | Invoke-Expression`" "
+            Write-Host "Script is restarting, wait..."
+            Start-Process -FilePath "conhost.exe" -ArgumentList "cmd.exe /c $cmd" -Verb runAs
+
+    } catch {
             [String]$cmd = "@echo off & chcp 850 >nul && REG add `"HKCU\Console`" /v QuickEdit /t REG_DWORD /d 0 /f >nul 2>&1 && cls && powershell.exe -Executionpolicy Unrestricted -File `"$PSCommandPath`" `"$ScriptArgs`""
             Write-Host "Script is restarting, wait..."
             Start-Process -FilePath "conhost.exe" -ArgumentList "cmd.exe /c $cmd" -Verb runAs
-    } catch {
-            [String]$cmd = "@echo off & chcp 850 >nul && REG add `"HKCU\Console`" /v QuickEdit /t REG_DWORD /d 0 /f >nul 2>&1 && cls && powershell.exe -Executionpolicy Unrestricted -Command `"Invoke-RestMethod https://raw.githubusercontent.com/Zet4ky/Sublime-Patch/main/subl_patch.ps1 | Invoke-Expression
-
-`" "
-            Write-Host "Script is restarting, wait..."
-            Start-Process -FilePath "conhost.exe" -ArgumentList "cmd.exe /c $cmd" -Verb runAs
     }
-
     Exit 1
 }
 
