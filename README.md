@@ -9,14 +9,15 @@ You have several options to run this script:
 1. **Run Directly from the Web:**
    Open PowerShell and execute the following command:
    ```powershell
-   irm https://raw.githubusercontent.com/Zet4ky/Sublime-Patch/main/subl_patch.ps1 | iex```
-2. **Download and Run:**
+   irm https://raw.githubusercontent.com/Zet4ky/Sublime-Patch/main/subl_patch.ps1 | iex
+   ```
+3. **Download and Run:**
 
     Download the script from the GitHub [repository](https://github.com/Zet4ky/Sublime-Patch/archive/refs/heads/main.zip).
     Extract the contents of `Sublime-Patch-main.zip`
     Right-click on `subl_patch.ps1` and select "Run with PowerShell".
 
-3. **Powershell:**
+4. **Powershell:**
 
     Open a PowerShell window.
     Copy and paste the entire script from the GitHub repository.
