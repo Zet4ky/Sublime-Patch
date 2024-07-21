@@ -26,6 +26,6 @@ You have several options to run this script:
 
 The script replaces a specific byte sequence in the Sublime Text executable to simulate activation. It performs the following byte replacement:
 
-Replace bytes at offset 140811 to 140817 with the following values: `0xC6 0x40 0x05 0x01 0x48 0x85 0xC9`
+bytes at offset 140811 to 140817 with the following values: `0xC6 0x40 0x05 0x01 0x48 0x85 0xC9`
 
 Source & Credits to: https://gist.github.com/skoqaq/3f3e8f28e23c881143cef9cf49d821ff?permalink_comment_id=4669272#gistcomment-4669272
