@@ -1,4 +1,4 @@
-# Sublime-Patch
+# sublime-patch
 
 ## Overview
 This script is designed to make Sublime Text think it is activated by patching specific bytes in the executable. 
