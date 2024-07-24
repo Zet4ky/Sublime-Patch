@@ -41,8 +41,8 @@ if (-Not (Test-Path $filePath)) {
 
     if (-Not (Test-Path $filePath)) {
         Write-Host "Sublime Text executable not found at $filePath. Exiting script."
-        Pause
-        exit
+        pause
+        exit 1
     }
 }
 
@@ -62,6 +62,8 @@ if ($sublimeVersionOutput -like "*4169*") {
     [System.IO.File]::WriteAllBytes($filePath, $bytes)
     
     Read-Host "Sublime Text patched Successfully. Press any key to exit"
+    exit 0
 } else {
     Read-Host "Incompatible Sublime version installed. Press any key to exit"
+    exit 1
 }
