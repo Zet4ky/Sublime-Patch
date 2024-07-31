@@ -1,7 +1,9 @@
 # sublime-patch
 
 ## Overview
-This script is designed to make Sublime Text think it is activated by patching specific bytes in the executable. 
+This script is designed to make Sublime Text think it is activated by patching specific bytes in the executable.
+
+I will update this to the next **Stable Build** when it comes out.
 
 ## Usage
 You have several options to run this script:
